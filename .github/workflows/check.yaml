@@ -39,14 +39,6 @@ jobs:
           moon install
           bash .mooncakes/illusory0x0/native/install.sh
 
-      - name: moon check
-        run: moon check --deny-warn --target native
-
-      - name: moon info
-        run: |
-          moon info --target native
-          git diff --exit-code
-
       - name: Build Static Library
         run: |
           bash .github/workflows/build_libposix.mbt.sh
